@@ -1,6 +1,6 @@
 Name:           extension-manager
 Version:        0.6.5
-Release:        4%{?dist}
+Release:        5%{?dist}
 Summary:        A utility for browsing and installing GNOME Shell Extensions
 License:        GPL-3.0-or-later
 URL:            https://github.com/mjakeman/extension-manager
@@ -39,5 +39,5 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/symbolic/apps/com.mattjakeman.ExtensionManager-symbolic.svg
 
 %changelog
-* Sat Dec 20 2025 Vani1-2 <giovannirafanan609@gmail.com> - 0.6.5-4
-- unbundled libbacktrace (switched to system package)
+* Wed Feb 25 2026 vani-tty1 <giovannirafanan609@gmail.com> - 0.6.5-5
+- rebuild without libbacktrace
