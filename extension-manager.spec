@@ -9,9 +9,6 @@ Source0:        extension-manager-%{version}.tar.gz
 BuildRequires:  git
 BuildRequires:  meson gcc blueprint-compiler desktop-file-utils libappstream-glib
 BuildRequires:  pkgconfig(gtk4) pkgconfig(libadwaita-1) pkgconfig(libsoup-3.0) pkgconfig(json-glib-1.0)
-
-BuildRequires:  libbacktrace-devel
-
 Requires:       gtk4 libadwaita
 
 %description
