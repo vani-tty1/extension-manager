@@ -16,10 +16,10 @@ option('backtrace',
 # Will be shown in error messages
 option('package',
 	type: 'string',
-	value: 'Unknown Package',
+	value: 'RPM',
 	description: 'The package format being built (e.g. "Flatpak")')
 
 option('distributor',
 	type: 'string',
-	value: 'Unknown Author',
-	description: 'The package distributor (e.g. "Your Name <optional email>")')
+	value: 'vani-tyy1',
+	description: 'The package distributor (e.g. "vani-tty1 <rafanangiovanni9@gmail.com>")')
