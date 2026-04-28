@@ -39,5 +39,5 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/symbolic/apps/com.mattjakeman.ExtensionManager-symbolic.svg
 
 %changelog
-* Wed Apr 28 2026 vani-tty1 <giovannirafanan609@gmail.com> - 0.6.5-6
+* Tue Apr 28 2026 vani-tty1 <giovannirafanan609@gmail.com> - 0.6.5-6
 - rebuild with the latest upstream changes
