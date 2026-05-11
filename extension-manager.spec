@@ -1,6 +1,6 @@
 Name:           extension-manager
 Version:        0.6.5
-Release:        6%{?dist}
+Release:        7%{?dist}
 Summary:        A utility for browsing and installing GNOME Shell Extensions
 License:        GPL-3.0-or-later
 URL:            https://github.com/mjakeman/extension-manager
@@ -18,7 +18,7 @@ A native tool for browsing, installing, and managing GNOME Shell Extensions.
 %autosetup
 
 %build
-%meson
+%meson -Dbacktrace=false
 %meson_build
 
 %install
@@ -39,5 +39,6 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/symbolic/apps/com.mattjakeman.ExtensionManager-symbolic.svg
 
 %changelog
-* Tue Apr 28 2026 vani-tty1 <giovannirafanan609@gmail.com> - 0.6.5-6
+* Mon May 11 2026 vani-tty1 <giovannirafanan609@gmail.com> - 0.6.5-7
 - rebuild with the latest upstream changes
+- now builds with -Dbacktrace=false so that we eliminate then to set in fork
