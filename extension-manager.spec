@@ -18,7 +18,10 @@ A native tool for browsing, installing, and managing GNOME Shell Extensions.
 %autosetup -n extension-manager-%{version}
 
 %build
-%meson -Dbacktrace=false
+%meson \
+    -Dbacktrace=false \
+    -Dpackage="Copr Build" \
+    -Ddistributor="Giovanni Rafanan <giovannirafanan609@gmail.com>"
 %meson_build
 
 %install
@@ -39,6 +42,5 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/symbolic/apps/com.mattjakeman.ExtensionManager-symbolic.svg
 
 %changelog
-* Tue Jun 16 2026 vani-tty1 <giovannirafanan609@gmail.com> - 0.6.5-8
-- rebuild for RHEL and CentOS
+* Tue Jun 16 2026 Giovanni Rafanan <giovannirafanan609@gmail.com> - 0.6.5-8
 - added runtime dependencies
