@@ -4,7 +4,7 @@ Release:        8%{?dist}
 Summary:        A utility for browsing and installing GNOME Shell Extensions
 License:        GPL-3.0-or-later
 URL:            https://github.com/mjakeman/extension-manager
-Source0:        extension-manager-%{version}.tar.gz
+Source0:        https://github.com/mjakeman/extension-manager/archive/refs/tags/v%{version}.tar.gz
 
 BuildRequires:  git
 BuildRequires:  meson gcc blueprint-compiler desktop-file-utils libappstream-glib
@@ -15,7 +15,7 @@ Requires:       gtk4 libadwaita json-glib libsoup3 libxml2
 A native tool for browsing, installing, and managing GNOME Shell Extensions.
 
 %prep
-%autosetup
+%autosetup -n extension-manager-%{version}
 
 %build
 %meson -Dbacktrace=false
