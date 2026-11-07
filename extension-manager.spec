@@ -1,13 +1,12 @@
 Name:           extension-manager
-Version:        0.6.5
-Release:        8%{?dist}
+Version:        0.7.0
+Release:        1%{?dist}
 Summary:        A utility for browsing and installing GNOME Shell Extensions
 License:        GPL-3.0-or-later
 URL:            https://github.com/mjakeman/extension-manager
-Source0:        https://github.com/mjakeman/extension-manager/archive/refs/tags/v%{version}.tar.gz
+Source0:        %{url}/archive/v%{version}/%{name}-%{version}.tar.gz
 
-BuildRequires:  git
-BuildRequires:  meson gcc blueprint-compiler desktop-file-utils libappstream-glib
+BuildRequires:  meson gcc gettext blueprint-compiler desktop-file-utils libappstream-glib
 BuildRequires:  pkgconfig(gtk4) pkgconfig(libadwaita-1) pkgconfig(libsoup-3.0) pkgconfig(json-glib-1.0)
 Requires:       gtk4 libadwaita json-glib libsoup3 libxml2
 
@@ -15,7 +14,7 @@ Requires:       gtk4 libadwaita json-glib libsoup3 libxml2
 A native tool for browsing, installing, and managing GNOME Shell Extensions.
 
 %prep
-%autosetup -n extension-manager-%{version}
+%autosetup -n %{name}-%{version}
 
 %build
 %meson \
@@ -42,5 +41,4 @@ desktop-file-validate %{buildroot}%{_datadir}/applications/*.desktop
 %{_datadir}/icons/hicolor/symbolic/apps/com.mattjakeman.ExtensionManager-symbolic.svg
 
 %changelog
-* Tue Jun 16 2026 Giovanni Rafanan <giovannirafanan609@gmail.com> - 0.6.5-8
-- added runtime dependencies
+%autochangelog
